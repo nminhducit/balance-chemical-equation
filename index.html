@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Cân bằng PTHH - Đề tài nghiên cứu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='//fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href='//cdn.jsdelivr.net/gh/nminhducit/balance-chemical-equation@d735d08/assets/css/body.css' rel='stylesheet'>
+  <script src='//cdn.jsdelivr.net/gh/nminhducit/balance-chemical-equation@d735d08/assets/js/body.js'></script>
+  <script integrity='sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw' src='//instant.page/5.1.0' type='module'></script>
+
+</head>
+<body>
+<div class="container">
+	<center><h2>Cân bằng PTHH</h2></center>
+<form action="#" method="get" onsubmit="doBalance(); return false;">
+<span style="width:99%; display:flex; flex-direction:row">
+<input type="text" id="inputFormula" class="form-control" autocomplete="off" placeholder="Nhập PT cần cân bằng" style="font-size:130%"/>
+<span>
+<input type="submit" value="Cân bằng" class="btn btn-primary" style="margin-left:0.5em"/>
+<input type="button" class="btn btn-success" value="Ngẫu nhiên" onclick="doRandom();" style="margin-left:0.5em"/></span>
+</span>
+<span id="balanced" style="font-family:serif; font-size:200%; line-height:2;"></span><span id="message"></span>
+<code id="codeOutput">&#xA0;</code>
+</form>
+</div>
+<br />
+<h2>Hướng dẫn</h2>
+<center>
+    <div class="container">
+<table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+    <thead class="thead-dark">
+        <tr>
+            <th>Tính năng</th>
+            <th>Đầu vào</th>
+            <th>Phương trình</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('N = N2');">Đầu vào</a></td>
+            <td><code>N = N<strong>2</strong></code></td>
+            <td>N<span class="rightarrow"> → </span>N<sub>2</sub></td>
+        </tr>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('H2 + O2 = H2O');">Các hợp chất</a></td>
+            <td><code>H2 + O2 = <strong>H2O</strong></code></td>
+            <td>H<sub>2</sub> + O<sub>2</sub><span class="rightarrow"> → </span>H<sub>2</sub>O</td>
+        </tr>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('Mg(OH)2 = MgO + H2O');">Nhóm chất</a></td>
+            <td><code>Mg<strong>(OH)</strong>2 = MgO + H2O</code></td>
+            <td>Mg(OH)<sub>2</sub><span class="rightarrow"> → </span>MgO + H<sub>2</sub>O</td>
+        </tr>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('H^+ + CO3^2- = H2O + CO2');">Các Ions</a></td>
+            <td><code>H<strong>^+</strong> + CO3<strong>^2-</strong> = H2O + CO2</code></td>
+            <td>H<sup>+</sup> + CO<sub>3</sub><sup>2−</sup><span class="rightarrow"> → </span>H<sub>2</sub>O + CO<sub>2</sub></td>
+        </tr>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('Fe^3+ + e = Fe');">Các Electrons</a></td>
+            <td><code>Fe^3+ + <strong>e</strong> = Fe</code></td>
+            <td>Fe<sup>3+</sup> + e<sup>−</sup><span class="rightarrow"> → </span>Fe</td>
+        </tr>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('A3^-+B2^2+=A5B+e');">No space</a></td>
+            <td><code>A3^-+B2^2+=A5B+e</code></td>
+            <td>A<sub>3</sub><sup>−</sup> + B<sub>2</sub><sup>2+</sup><span class="rightarrow"> → </span>A<sub>5</sub>B + e<sup>−</sup></td>
+        </tr>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('C 3 H 5 ( O H ) 3 + O 2 = H 2 O + C O 2');">More space</a></td>
+            <td><code>C 3 H 5 ( O H ) 3 + O 2 = H 2 O + C O 2</code></td>
+            <td>C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub> + O<sub>2</sub><span class="rightarrow"> → </span>H<sub>2</sub>O + CO<sub>2</sub></td>
+        </tr>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('H1^1+ + e = H1^1-');">Optional 1</a></td>
+            <td><code>H<strong>1</strong>^<strong>1</strong>+ + e = H<strong>1</strong>^<strong>1</strong>-</code></td>
+            <td>H<sup>+</sup> + e<sup>−</sup><span class="rightarrow"> → </span>H<sup>−</sup></td>
+        </tr>
+        <tr>
+            <td><a href="#" title="Nhấp để hiển thị bản demo" onclick="event.preventDefault(); doDemo('Foo^5+ + Bar^3- = FooBar2 + FooBar^-');">Flexible names</a></td>
+            <td><code><strong>Foo</strong>^5+ + <strong>Bar</strong>^3- = <strong>Foo</strong><strong>Bar</strong>2 + <strong>Foo</strong><strong>Bar</strong>^-</code></td>
+            <td>Foo<sup>5+</sup> + Bar<sup>3−</sup><span class="rightarrow"> → </span>FooBar<sub>2</sub> + FooBar<sup>−</sup></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</center>
+</body>
+</html>
