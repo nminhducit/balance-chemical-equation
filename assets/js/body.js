@@ -1,4 +1,3 @@
-"use strict";
 var formulaElem = document.getElementById("inputFormula");
 function doBalance() {
     var msgElem = document.getElementById("message");
