@@ -1,7 +1,5 @@
-# balance-chemical-equation
+# bcetools
 Balance Chemical Equation (BCE)
-
-# bcetools ![Build Status]
 
 Copyright
 -------------
