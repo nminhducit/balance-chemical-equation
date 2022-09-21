@@ -1,4 +1,4 @@
-# bcetools
+# Bcetools
 Balance Chemical Equation (BCE)
 
 Copyright
