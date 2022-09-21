@@ -69,7 +69,6 @@ var RANDOM_DEMOS = [
     "HgO = Hg + O2",
     "FeS2 + O2 = Fe2O3 + SO2",
     "KOH + Al2(SO4)3 = K2SO4 + Al(OH)3",
-    "FexOy + CO = FeO + CO2",
     "Al + Fe3O4 = Al2O3 + Fe",
     "Na + H2O = NaOH + H2",
     "Fe3O4 + HCl = FeCl2+ FeCl3 + H2O",
@@ -80,56 +79,36 @@ var RANDOM_DEMOS = [
     "Fe3O4 + H2SO4 = FeSO4 + Fe2(SO4)3 + H2O",
     "NO2 + O2 + H2O = HNO3",
     "C4H10 + O2 = CO2 + H2O",
-    "CnH2n+2 + O2 = CO2 + H2O",
-    "CnH2n + O2 = CO2 + H2O",
-    "CnH2n-2 + O2 = CO2 + H2O",
-    "CxHy + O2 = CO2 + H2O",
-    "CxHyOz + O2 = CO2 + H2O",
     "CH3COOH + O2 = CO2 + H2O",
-    "(HO)2CnHm(COOH)2 + O2 = CO2 + H2O",
-    "CxHyCOOH + O2 = CO2 + H2O",
     "Fe3O4 + CO = Fe + CO2",
-    "FeSO4 + K2Cr2O7 + H2SO4 = Fe2(SO4)3 + K2SO4 + Cr2(SO4)3 + H2O",
+    "As2S3 + H2O + HNO3 = NO + H3AsO4 + H2SO4",
     "Cu + HNO3 = Cu(NO3)2 + NO + H2O",
     "Fe3O4 + HNO3 = Fe(NO3)3 + NO + H2O",
     "S + HNO3 = H2SO4 + NO",
     "C + HNO3 = CO2 + NO + H2O",
     "H2SO4 + H2S = S + H2O",
-    "Cr2O3 + KNO3 + KOH = K2CrO4 + KNO2 + H2O",
     "H2S + HClO3 = HCl + H2SO4",
     "NH3 + O2 = NO + H2O",
     "Fe + HNO3 = Fe(NO3)3 + N2O + H2O",
     "Cu + H2SO4 = CuSO4 + SO2 + H2O",
-    "K2S + KMnO4 + H2SO4 = S + H2SO4 + K2SO4 + H2O",
     "Mg + HNO3 = Mg(NO3)3 + NH4NO3 + H2O",
-    "CuS2 + HNO3 = Cu(NO3)2 + H2SO4 + N2O + H2O",
     "FeSO4 + Cl2 + H2SO4 = Fe2(SO4)3 + HCl",
-    "Zn + HNO3 = Zn(NO3)2 + NO + NO2 + H2O",
-    "FeS2 + HNO3 = Fe(NO3)3 + NO + H2SO4 + H2O",
     "KClO3 + NH3 = KNO3 + KCl + Cl2 + H2O",
     "KNO3 + C+ S = K2S + N2 + CO2",
-    "FeSO4 + K2Cr2O7 + H2SO4 = Fe2(SO4)3 + K2SO4 + Cr2(SO4)2 + H2O",
-    "Na2SO3 + KMnO4 + H2O = Na2SO4 + MnO2 + KOH",
     "As2S3 + HNO3 + H2O = H3AsO4 + NO + H2SO4",
-    "CH3CH2OH + K2Cr2O7 + H2SO4 = CH3COOH + Cr2(SO4)3 + K2SO4 + H2O",
     "KClO3 = KCl + O2",
     "AgNO3 = Ag + NO2 + O2",
     "HNO3 = NO2 + O2 + H2O",
     "KMnO4 = K2MnO4 + O2 + MnO2",
     "FeS + KNO3 = KNO2 + Fe2O3 + SO3",
-    "Cu2S + HNO3 = NO + Cu(NO3)2 + CuSO4 + H2O",
-    "FeS + H2SO4 = Fe2(SO4)3 + S + SO2 + H2O",
-    "M + HNO3 = M(NO3)n + NO2­ + H2O",
     "Zn + HNO3 + H2O = (Zn(H2O)4)NO3 + H2",
     "Zn + HNO3 + H2O = H2ZnO3 + NO",
-    "Zn + HNO3 + H2O = NH4NO3 + Zn(NO3)2 + H2O",
     "Zn + HNO3 + H2O = Zn(NO3)2 + H3O",
     "Zn + HNO3 + H2O = Zn(OH)2 + NO",
     "Zn + HNO3 + H2O = Zn(OH)4 + NH3",
     "Zn + HNO3 + H2O2 = Zn(NO3)2 + H2O",
     "Zn + HNO3 + H2SO3 = N2O + ZnSO3 + H2O",
     "S + O + H = SOH2",
-    "C4H10O + K2Cr2O7 + H2SO4 = C2H6O + K2SO4 + Cr2(SO4)3 + H2O + CO2",
     "AgCu + HNO3 = AgNO3 + Cu(NO3)2 + H2",
     "C3H6O3 + AgNO3 = C3H5AgO3 + HNO3",
     "N2 + O2 = NO",
@@ -140,8 +119,10 @@ var RANDOM_DEMOS = [
     "Cu(OH)2 + HCl = CuCl2 + H2O",
     "P + O2 = P2O5",
     "Al + Cl2 = AlCl3",
+    "Al + HCl = AlCl3 + H2",
     "Fe(OH)3 = Fe2O3 + H2O",
     "Al2(SO4)3 + BaCl2 = BaSO4+ AlCl3",
+    "Fe2O3 + HNO3 = Fe(NO3)3 + H2O",
     "H2 + O2 = H2O",
     "Fe + O2 = Fe2O3",
     "NH3 + O2 = N2 + H2O",
@@ -163,8 +144,6 @@ var RANDOM_DEMOS = [
     "CHCl3 + O2 = CO2 + H2O + Cl2",
     "H2C2O4 + MnO4^- = H2O + CO2 + MnO + OH^-",
     "H2O2 + Cr2O7^2- = Cr^3+ + O2 + OH^-",
-    "KBr + KMnO4 + H2SO4 = Br2 + MnSO4 + K2SO4 + H2O",
-    "K2Cr2O7 + KI + H2SO4 = Cr2(SO4)3 + I2 + H2O + K2SO4",
     "KClO3 + KBr + HCl = KCl + Br2 + H2O",
     "Ag + HNO3 = AgNO3 + NO + H2O",
     "P4 + OH^- + H2O = H2PO2^- + P2H4",
@@ -198,7 +177,7 @@ var Parser =(function () {
                 break;
             }
             else
-                throw { message: "Plus or equal sign expected", start: this.tok.pos };
+                throw { message: "Không hợp lệ", start: this.tok.pos };
         }
         var rhs = [this.parseTerm()];
         while (true) {
@@ -286,7 +265,7 @@ var Parser =(function () {
             else if (next == ")") {
                 this.tok.consume(next);
                 if (items.length == 0)
-                    throw { message: "Trống nhóm chất", start: startPos, end: this.tok.pos };
+                    throw { message: "Nhóm chất không được để trống", start: startPos, end: this.tok.pos };
                 break;
             }
             else
@@ -482,7 +461,7 @@ var Group =(function () {
 var ChemElem =  (function () {
     function ChemElem(name, count) {
         if (count < 1)
-            throw "Lỗi xác nhận: Số lượng phải là một số nguyên dương";
+            throw "Số lượng phải là một số nguyên dương";
         this.name = name;
         this.count = count;
     }
